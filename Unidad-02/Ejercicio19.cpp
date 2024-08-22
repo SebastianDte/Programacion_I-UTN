@@ -18,5 +18,36 @@ int main()
 {
     setlocale(LC_CTYPE,"Spanish");
     
+    bool urgente = false;
+    int cantHoras = 0;
+    char lenguaje,opcion = 0;
+    float total=0;
+    cout<<"Seleccione un lenguaje para su proyecto: "<<endl;
+    cout<<"C/C++ = 'C' | C# = '#' | Python = 'P' | Go = 'G' "<<endl;
+    cin>>lenguaje;
+    cout<<"Cuantas horas llevará su proyecto?"<<endl;
+    cin>>cantHoras;
+    cout<<"Lo nesecita con Urgencia ? Presione 'S' si es urgente - 'N' Si no es urgente."<<endl;
+    cin>>opcion;
+    if(opcion=='S')urgente=true;
+    
+    switch (lenguaje)
+    {
+    case 'C':
+        total = 7500 * cantHoras;
+        break;
+    case '#':
+        total = 6100 * cantHoras;
+    case 'P':
+        total = 5400 * cantHoras;
+    case 'G':
+        total = 5000 * cantHoras;
+    default:
+        cout<<"Respuesta Incorrecta."<<endl;
+        break;
+    }
+
+    if(urgente)total=total*125/100;
+    cout<<"El total es de: " << total << endl;
     
 }
