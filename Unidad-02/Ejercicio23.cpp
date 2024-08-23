@@ -14,7 +14,22 @@ using namespace std;
 int main()
 {
     setlocale(LC_CTYPE,"Spanish");
+    int mes = 0,bimestre = 0;
+    bool mesValido=true;
 
+    cout<<"Ingrese un mes: ";
+    cin>>mes;
+    if(mes<1){
+        cout<<"Mes ingresado no valido.Deber ser mayor o igual a 1"<<endl;
+        mesValido=false;
+    }
+
+    if(mesValido){
+        bimestre = (mes+1)/2;
+        cout<<"Pertece al bimestre: " << bimestre;
+    }
+
+    
     
     
 }
