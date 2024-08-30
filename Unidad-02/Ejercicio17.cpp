@@ -26,7 +26,7 @@ int main()
     cout<<"Número 4:";
     cin>>n4;
 
-    if(n1<n2 && n2<n3 && n3<n4)
+    if(n1<=n2 && n2<=n3 && n3<=n4)
     cout<<"Estan ordenados.";
     else cout<<"Estan desordenados.";
     
